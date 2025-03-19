@@ -8,16 +8,15 @@
   udev,
   nix-update-script,
 }:
-
 rustPlatform.buildRustPackage {
   pname = "cosmic-settings-daemon";
-  version = "1.0.0-alpha.6-unstable-2025-02-28";
+  version = "0-unstable-2025-03-19";
 
   src = fetchFromGitHub {
-    owner = "pop-os";
+    owner = "sefodopo";
     repo = "cosmic-settings-daemon";
-    rev = "a666c999e811805e20d6f3d794360bf55d700aa2";
-    hash = "sha256-lGRYvY25j89to8D+2ghwPh0BOCYaRD1MIb/3SzsqLVw=";
+    rev = "b298ec1c2a496885a7e3aae69699a53c06c7e618";
+    hash = "sha256-ILx5BLF3UB3JW8VzimN3Elk1zGmBcX0+wtLTmnwzB2Y=";
   };
 
   useFetchCargoVendor = true;
@@ -35,6 +34,7 @@ rustPlatform.buildRustPackage {
     mkdir -p $out/share/{polkit-1/rules.d,cosmic/com.system76.CosmicSettings.Shortcuts/v1}
     cp data/polkit-1/rules.d/*.rules $out/share/polkit-1/rules.d/
     cp data/system_actions.ron $out/share/cosmic/com.system76.CosmicSettings.Shortcuts/v1/system_actions
+    cp data/vim_symbols.ron $out/share/cosmic/com.system76.CosmicSettings.Shortcuts/v1/vim_symbols
   '';
 
   passthru.updateScript = nix-update-script {
