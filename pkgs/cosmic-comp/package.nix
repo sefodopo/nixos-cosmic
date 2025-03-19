@@ -18,7 +18,6 @@
   useSystemd ? lib.meta.availableOn stdenv.hostPlatform systemd,
   nix-update-script,
 }:
-
 rustPlatform.buildRustPackage {
   pname = "cosmic-comp";
   version = "1.0.0-alpha.6-unstable-2025-03-17";
@@ -31,7 +30,9 @@ rustPlatform.buildRustPackage {
   };
 
   useFetchCargoVendor = true;
-  cargoHash = "sha256-g+G9zvzugfSCI6qYyclijtR3mqUKQ/uUw+ZvXbPgBVA=";
+  cargoHash = "sha256-+AIM+0NjC14SyHF+meEjTSe+6cYUzus14oTUGZzYEPM=";
+
+  cargoPatches = [ ../../cosmic-settings-config.patch ];
 
   separateDebugInfo = true;
 
