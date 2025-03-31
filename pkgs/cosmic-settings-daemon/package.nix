@@ -10,13 +10,13 @@
 }:
 rustPlatform.buildRustPackage {
   pname = "cosmic-settings-daemon";
-  version = "0-unstable-2025-03-19";
+  version = "1.0.0-alpha.6-unstable-2025-03-20";
 
   src = fetchFromGitHub {
     owner = "sefodopo";
     repo = "cosmic-settings-daemon";
-    rev = "b298ec1c2a496885a7e3aae69699a53c06c7e618";
-    hash = "sha256-ILx5BLF3UB3JW8VzimN3Elk1zGmBcX0+wtLTmnwzB2Y=";
+    rev = "de3dbf1741bc02f5b94fca5cc6ac37d2c75768a8";
+    hash = "sha256-EeEozS5F0322faiN229N5WCJRXFWYKoFRIAr7ngOLuc=";
   };
 
   useFetchCargoVendor = true;
