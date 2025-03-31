@@ -54,7 +54,7 @@
           };
       };
 
-      packages = forAllSystems (system: self.lib.packagesFor nixpkgs.legacyPackages.${system});
+      packages = forAllSystems (system: self.lib.packagesFor nixpkgs-stable.legacyPackages.${system});
 
       overlays = {
         default =
