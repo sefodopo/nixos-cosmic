@@ -20,8 +20,8 @@ rustPlatform.buildRustPackage {
   src = fetchFromGitHub {
     owner = "pop-os";
     repo = "cosmic-player";
-    rev = "6d5c2f020d3fcca8fcf0f25b6039b6e4a173e71e";
-    hash = "sha256-HNqYyWuTn0h+U2AoKmE/jXseHhp4vaFv00hYz5ufPbc=";
+    rev = "2c5d30baa455903cfcf6ad3e6abe7f4b63aa8412";
+    hash = "sha256-skWwwBM9lpvWEbzEPFX8CuNg1qU8LL1FBLveWdFamlU=";
   };
 
   useFetchCargoVendor = true;
