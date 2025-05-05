@@ -9,7 +9,6 @@
   xdg-desktop-portal-cosmic,
   nix-update-script,
 }:
-
 rustPlatform.buildRustPackage {
   pname = "cosmic-session";
   version = "1.0.0-alpha.7-unstable-2025-04-24";
@@ -43,8 +42,11 @@ rustPlatform.buildRustPackage {
 
   justFlags = [
     "--set"
-    "prefix"
+    "rootdir"
     (placeholder "out")
+    "--set"
+    "prefix"
+    "./."
     "--set"
     "cosmic_dconf_profile"
     "cosmic"
