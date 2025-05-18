@@ -12,13 +12,13 @@
 
 rustPlatform.buildRustPackage {
   pname = "cosmic-ext-tweaks";
-  version = "0.1.3-unstable-2025-04-12";
+  version = "0.1.3-unstable-2025-05-17";
 
   src = fetchFromGitHub {
     owner = "cosmic-utils";
     repo = "tweaks";
-    rev = "793452f3f136171786ceebe43273dc2fed360d7a";
-    hash = "sha256-doZF7rXHCV1J6wIL5uacAotYuqBSDRC7lImL78WYEUw=";
+    rev = "5a806b309d08db40519853310d36b5971d9f7240";
+    hash = "sha256-BmRR8hdu6w0t7Fw+3IZm3+XFFH4UDLrFiYmd7oHDmMY=";
   };
 
   useFetchCargoVendor = true;
