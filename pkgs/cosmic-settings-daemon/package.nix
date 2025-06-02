@@ -10,7 +10,7 @@
 }:
 rustPlatform.buildRustPackage {
   pname = "cosmic-settings-daemon";
-  version = "1.0.0-alpha.6-unstable-2025-03-20";
+  version = "epoch-1.0.0-alpha.6";
 
   src = fetchFromGitHub {
     owner = "sefodopo";
