@@ -20,7 +20,7 @@
 }:
 rustPlatform.buildRustPackage {
   pname = "cosmic-comp";
-  version = "1.0.0-alpha.7-unstable-2025-05-10";
+  version = "epoch-1.0.0-alpha.7";
 
   src = fetchFromGitHub {
     owner = "sefodopo";
