@@ -9,6 +9,7 @@
   libinput,
   pkg-config,
   pulseaudio,
+  pipewire,
   stdenv,
   udev,
   util-linux,
@@ -31,6 +32,7 @@ rustPlatform.buildRustPackage {
 
   nativeBuildInputs = [
     libcosmicAppHook
+    rustPlatform.bindgenHook
     just
     pkg-config
     util-linux
@@ -40,6 +42,7 @@ rustPlatform.buildRustPackage {
     glib
     libinput
     pulseaudio
+    pipewire.dev
     udev
   ];
 
