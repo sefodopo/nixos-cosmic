@@ -11,17 +11,17 @@
 }:
 rustPlatform.buildRustPackage {
   pname = "cosmic-session";
-  version = "1.0.0-alpha.7-unstable-2025-04-24";
+  version = "1.0.0-alpha.7-unstable-2025-09-05";
 
   src = fetchFromGitHub {
     owner = "pop-os";
     repo = "cosmic-session";
-    rev = "80209d5aadcfc05803eaa5b5099a5db1550d3fb1";
-    hash = "sha256-vozm4vcXV3RB9Pk6om1UNCfGh80vIVJvSwbzwGDQw3Y=";
+    rev = "2441be2ad02fc28b397f67b704f2b41de7a96ed6";
+    hash = "sha256-J+r4HoxZmKU0E8eirGpLOihIvkVlmkmcXMPMkWsQuK8=";
   };
 
   useFetchCargoVendor = true;
-  cargoHash = "sha256-68budhhbt8wPY7sfDqwIs4MWB/NBXsswK6HbC2AnHqE=";
+  cargoHash = "sha256-bo46A7hS1U0cOsa/T4oMTKUTjxVCaGuFdN2qCjVHxhg=";
 
   postPatch = ''
     substituteInPlace Justfile \
