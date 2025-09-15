@@ -26,7 +26,6 @@ rustPlatform.buildRustPackage {
     hash = "sha256-xmEYM+4QddHqzWWzJjkhQTVvxZKtyEyRtyLNKV1ygKE=";
   };
 
-  useFetchCargoVendor = true;
   cargoHash = "sha256-Td1Dc00doBSDIlDekVp03TmAMuhEGAtShcgoMnggqA8=";
 
   nvtop = fetchFromGitHub {

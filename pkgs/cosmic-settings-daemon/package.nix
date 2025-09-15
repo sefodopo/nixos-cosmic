@@ -6,6 +6,8 @@
   libinput,
   pkg-config,
   udev,
+  openssl,
+  libpulseaudio,
   nix-update-script,
 }:
 rustPlatform.buildRustPackage {
@@ -19,13 +21,14 @@ rustPlatform.buildRustPackage {
     hash = "sha256-tgbbr7JRw6Obb0bHxHVI40TMtb6AxFgxXWdfetlwdSM=";
   };
 
-  useFetchCargoVendor = true;
   cargoHash = "sha256-1YQ7eQ6L6OHvVihUUnZCDWXXtVOyaI1pFN7YD/OBcfo=";
 
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [
     libinput
+    libpulseaudio
     udev
+    openssl
   ];
 
   env.GEOCLUE_AGENT = "${lib.getLib geoclue2-with-demo-agent}/libexec/geoclue-2.0/demos/agent";
